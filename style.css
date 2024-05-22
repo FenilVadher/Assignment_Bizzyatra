@@ -1,0 +1,12 @@
+#signupform,#loginform{
+    
+    border: 1px solid #ddd;
+    background-color: #EEEEEE;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+body{
+background-color:#344C64;
+}   
