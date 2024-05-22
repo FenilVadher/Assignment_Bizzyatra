@@ -1,5 +1,5 @@
 <?php
 
 include 'partials/nav.php';
-echo "login to explore";
+echo "login your account in the chatapp via email verification.";
 ?>
