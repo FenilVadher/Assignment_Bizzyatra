@@ -1,9 +1,15 @@
 <?php
+// db_connect.php
 
-$link = mysqli_connect("localhost", "root", "", "chattingapp");
-if(!($link)){
+$hostname = "localhost";
+$username = "root";
+$password = "";
+$database = "app";
 
-    die(mysqli_connect_error());
+// Create connection
+$link = mysqli_connect($hostname, $username, $password, $database);
+
+// Check connection
+if (!$link) {
+    die("Connection failed: " . mysqli_connect_error());
 }
-
-?>
