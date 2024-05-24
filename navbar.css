@@ -1,0 +1,6 @@
+#navitem {
+  color: rgb(255, 255, 255);
+}
+#navitem:hover {
+  transform: scale(1.1);
+}
