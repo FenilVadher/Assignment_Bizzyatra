@@ -1,58 +1,19 @@
-#signuppage,
-#loginpage {
-  border: 1px solid #ddd;
-  background-color: #E5DDC5;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+#signupform,
+#loginform {
+  border: 1px solid slateblue;
+  background-color:#BDCDD6;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 8px;
 }
 
 body {
-  background-color: #35374B;
+  background-color: #7C9D96;
 }
 
-/* Add responsive CSS here */
-.container {
-  max-width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+button:hover {
+  transform: scale(1.1);
 }
-
-.card {
-  background-color: #E3E1D9; /* New background color */
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
-  padding: 20px; /* Padding inside the card */
-  max-width: 550px; /* Increased width for the card */
-  margin: auto; /* Center the card horizontally */
-}
-
-.card-title {
-  color: #101111; /* Blue color for the card title */
-}
-
-@media (min-width: 576px) {
-  .container {
-      max-width: 480px; /* Reduced width for smaller screens */
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-      max-width: 640px; /* Reduced width for medium screens */
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-      max-width: 800px; /* Reduced width for large screens */
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-      max-width: 960px; /* Reduced width for extra-large screens */
-  }
+.btn {
+  color: white;
 }

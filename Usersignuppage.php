@@ -45,17 +45,17 @@ if (isset($_POST['register'])) {
 
       if ($result) {
         $to = $email;
-        $subject = 'Email verification for Chatapp';
+        $subject = 'E-mail verification';
         $f2 = "http://localhost/Bizzyatra_Assignment/Assignment_Bizzyatra/Userloginpage.php?token=$verification";
 
         echo $f2;
         $message = "
         <html>
         <head>
-          <title>Email verification for chatapp</title>
+          <title>E-mail verification</title>
         </head>
         <body>
-          <p>Your account has been created successfully. you can login for that click on given link:</p>
+          <p>Your account has been created. You can log in now by clicking on this link:</p>
           <a href='$f2'>Verify your email address</a>
          
         </body>
@@ -93,36 +93,36 @@ if (isset($_POST['register'])) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Signup for chatapp</title>
+  <title>Signup</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<div class="container" style="margin-top: 120px;">
+  <div class="container" style="margin-top: 120px; width:550px;">
     <form class="my-5" id="signupform" action="Usersignuppage.php" method="POST">
-        <div class="card">
-            <div class="card-body">
-                <h3 class="card-title text-center mb-4">Signup your Account for Chatapp</h3>
-                <div class="mb-3">
-                    <label for="InputEmail" class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" required>
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control" id="password" required>
-                </div>
-                <div class="mb-3">
-                    <label for="confirmpassword" class="form-label">Confirm Password</label>
-                    <input type="password" name="confirm_password" class="form-control" id="confirmpassword" required>
-                    <div id="emailHelp" class="form-text">Make sure you enter the same password</div>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <button type="submit" name="register" class="btn btn-primary">Register</button>
-                </div>
-            </div>
-        </div>
+      <div class="mb-3">
+        <h3 style="text-align:center;">Signup Account for Chatapp</h3>
+        <br>
+      </div>
+      <div class="mb-3">
+        <label for="InputEmail" class="form-label">Email address</label>
+        <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" id="password" required>
+      </div>
+      <div class="mb-3">
+        <label for="confirmpassword" class="form-label">Confirm Password</label>
+        <input type="password" name="confirm_password" class="form-control" id="confirmpassword" required>
+        <div id="emailHelp" class="form-text">Make sure you enter the same password</div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <button type="submit" name="register" class="btn " style="background-color:slateblue">Register</button>
+      </div>
     </form>
-</div>
-
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>

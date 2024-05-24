@@ -12,7 +12,6 @@ if (file_exists('partials/db_connect.php')) {
   echo "connection file not found.";
 }
 
-// Check if the verification token is set in the URL
 if (isset($_GET['token'])) {
   $verification = ($_GET['token']);
   $sql_verify_query = "SELECT email, verification, verified_status, password FROM user_details WHERE verification='$verification' LIMIT 1";
@@ -93,33 +92,40 @@ if (isset($_GET['token'])) {
 
 <body>
 
-<div class="container" style="margin-top: 120px; width:550px;">
-    <div class="card">
-        <div class="card-body">
-            <form class="my-5" id="loginform" action="Userloginpage.php" method="POST">
-                <div class="mb-3">
-                    <h3 style="text-align:center;">Login for Chatapp</h3>
-                    <br>
-                </div>
-                <div class="mb-3">
-                    <label for="InputEmail" class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" required>
-                </div>
-                <div class="mb-3">
-                    <label for="InputPassword" class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control" id="InputPassword" required>
-                </div>
-                <div class="mb-4">
-                    <label for="signup" class="form-label">New User?</label>
-                    <a href="Usersignuppage.php" id="signup" name="signup" class="alert-link" style="color: slateblue;">Signup</a>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <button type="submit" name="login" style="background-color:slateblue" class="btn">Login</button>
-                </div>
-            </form>
-        </div>
+  <div class="container" id="maindiv">
+    <div class="container" id="left">
+
     </div>
-</div>
+    <div class="container" id="right" style="margin-top: 100px; width:550px;">
+      <form class="my-5" id="loginform" action="" method="POST">
+        <div class="mb-3">
+          <h3 style="text-align:center;">Login Page for chatapp</h3>
+          <br>
+        </div>
+        <div class="mb-3">
+          <label for="InputEmail" class="form-label">Email address</label>
+          <input type="email" class="form-control" name="email" id="InputEmail" aria-describedby="emailHelp" required>
+        </div>
+        <div class="mb-3">
+          <label for="InputPassword" class="form-label">Password</label>
+          <input type="password" name="password" class="form-control" id="InputPassword" required>
+        </div>
+        <?php
+        if (isset($_GET['token'])) {
+          echo '<input type="hidden" name="verify_token" value="' . htmlspecialchars($_GET['token']) . '">';
+        }
+        ?>
+        <div class="mb-4">
+          <label for="signup" class="form-label">New User?</label>
+          <a href="Usersignuppage.php" id="signup" name="signup" class="alert-link" style="color: slateblue;">Signup</a>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" name="login" style="background-color:slateblue" class="btn">Login</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
