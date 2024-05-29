@@ -1,0 +1,43 @@
+.table-container {
+  margin-top: 20px;
+}
+
+.friend-request-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.friend-request-table th,
+.friend-request-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  /* Adjusted padding for better readability */
+  text-align: left;
+}
+
+.friend-request-table th {
+  background-color: #987070;
+  color: #333;
+}
+
+.friend-request-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.friend-request-table tr:hover {
+  background-color: #e9ecef;
+}
+
+.friend-request-table button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f97300;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.friend-request-table button:hover {
+  background-color: #6d5d6e;
+}

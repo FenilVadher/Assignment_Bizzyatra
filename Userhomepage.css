@@ -1,0 +1,66 @@
+/* custom.css */
+
+/* Button Styles */
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50; /* Green */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker Green */
+}
+
+button.btn-danger {
+  background-color: #f44336; /* Red */
+}
+
+button.btn-danger:hover {
+  background-color: #d32f2f; /* Darker Red */
+}
+
+/* Modal Styles */
+.modal-content {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.modal-header {
+  background-color: #4caf50; /* Green */
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modal-body {
+  color: #333;
+}
+
+.modal-footer {
+  background-color: #f9f9f9;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.modal-footer .btn-secondary {
+  background-color: #ccc;
+  color: black;
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: #b3b3b3;
+}

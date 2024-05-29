@@ -1,0 +1,19 @@
+#signupform,
+#loginform {
+  border: 1px solid slateblue;
+  background-color: #bdcdd6;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+body {
+  background-color: #7c9d96;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+.btn {
+  color: white;
+}
