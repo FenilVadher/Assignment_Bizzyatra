@@ -42,7 +42,13 @@ if (isset($_POST['register'])) {
       $sql = "INSERT INTO user_details (verification, email, password) VALUES ('$verification', '$email', '$hash')";
 
       $result = mysqli_query($link, $sql);
-
+      
+      $insert_fr = "INSERT INTO fr_user (UserID) VALUES ('')";
+      
+      $insert_fr_run = mysqli_query($link, $insert_fr);
+      if( $insert_fr_run ){
+        echo "creaated";
+      }
       if ($result) {
         $to = $email;
         $subject = 'E-mail verification';
@@ -95,34 +101,43 @@ if (isset($_POST['register'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Signup</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="signup.css">
 </head>
 
 <body>
-  <div class="container" style="margin-top: 120px; width:550px;">
-    <form class="my-5" id="signupform" action="Usersignuppage.php" method="POST">
-      <div class="mb-3">
-        <h3 style="text-align:center;">Signup Account for Chatapp</h3>
-        <br>
-      </div>
-      <div class="mb-3">
-        <label for="InputEmail" class="form-label">Email address</label>
-        <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" required>
-      </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" name="password" class="form-control" id="password" required>
-      </div>
-      <div class="mb-3">
-        <label for="confirmpassword" class="form-label">Confirm Password</label>
-        <input type="password" name="confirm_password" class="form-control" id="confirmpassword" required>
-        <div id="emailHelp" class="form-text">Make sure you enter the same password</div>
-      </div>
-      <div class="d-flex justify-content-center">
-        <button type="submit" name="register" class="btn " style="background-color:slateblue">Register</button>
-      </div>
-    </form>
+  <div class="container" id="maindiv">
+
+    <div class="container" id="left">
+
+      <form class="my-5" id="signupform" action="Usersignuppage.php" method="POST">
+        <div class="mb-3">
+          <h3 style="text-align:center;">Signup for chatapp</h3>
+          <br>
+        </div>
+        <div class="mb-3">
+          <label for="InputEmail" class="form-label">Email address</label>
+          <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" name="password" class="form-control" id="password" required>
+        </div>
+        <div class="mb-3">
+          <label for="confirmpassword" class="form-label">Confirm Password</label>
+          <input type="password" name="confirm_password" class="form-control" id="confirmpassword" required>
+          <div id="emailHelp" class="form-text">Make sure you enter the same password</div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" name="register" class="btn" id="regbtn" style="background-color:#987070">Register</button>
+        </div>
+      </form>
+    </div>
+    <div class="container" id="right">
+
+
+    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -1,0 +1,59 @@
+/* Custom CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.container-fluid {
+  padding-left: 0;
+}
+
+.sidebar {
+  background-color: #212529;
+  /* Darker color for the sidebar */
+  color: #fff;
+  padding-top: 20px;
+  width: 280px;
+  /* Increased width of the sidebar */
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #f8f9fa;
+}
+
+.content {
+  background-color: #fff;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.nav-link {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background-color: #6c757d;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu {
+  background-color: #343a40;
+}
+
+.dropdown-item {
+  color: #fff;
+}
+
+.dropdown-item:hover {
+  background-color: #6c757d;
+}

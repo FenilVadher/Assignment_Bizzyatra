@@ -1,0 +1,53 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+.btn {
+  color: white;
+}
+#maindiv {
+  display: flex;
+  flex-direction: row;
+  height: 490px;
+  margin-top: 100px;
+  width: 730px;
+  border: 1px solid #000000;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 25px;
+  align-items: center;
+}
+#left {
+  height: 460px;
+  width: 140px;
+  background-color: #987070;
+  width: 22vw;
+  border-radius: 15px;
+  margin-left: -5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#left img {
+  height: 260px;
+  width: 260px;
+}
+#right {
+  margin-left: 10px;
+  height: 450px;
+  width: 22vw;
+  /* background-color: rgb(205, 90, 105); */
+}
+
+#loginbtn {
+  width: 300px;
+  height: 40px;
+}
+#forgotpass {
+  margin-left: 25px;
+}

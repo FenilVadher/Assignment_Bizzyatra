@@ -32,7 +32,7 @@ if (isset($_GET['token'])) {
             if ($update_status_run) {
               $_SESSION['loggedin'] = true;
               $_SESSION['email'] = $email;
-              header('location:Userhomepage.php');
+              header('location:dashboard.php');
               exit();
             }
           } else {
@@ -63,7 +63,7 @@ if (isset($_GET['token'])) {
             $_SESSION['loggedin'] = true;
             $_SESSION['email'] = $email;
             $_SESSION['authenticated'] = 'true';
-            header('location:Userhomepage.php');
+            header('location:dashboard.php');
             exit();
           } else {
             echo "Invalid password";
@@ -87,20 +87,23 @@ if (isset($_GET['token'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login Verify</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+
 </head>
 
 <body>
 
   <div class="container" id="maindiv">
     <div class="container" id="left">
+      <img src="images/login.avif" alt="">
 
     </div>
-    <div class="container" id="right" style="margin-top: 100px; width:550px;">
+    <div class="container" id="right">
       <form class="my-5" id="loginform" action="" method="POST">
-        <div class="mb-3">
-          <h3 style="text-align:center;">Login Page for chatapp</h3>
-          <br>
+        <div class="mb-3" id="wlcmmsg">
+          <h3>Chatapp login</h3>
+          <p>Login your account for chatapp</p>
+
         </div>
         <div class="mb-3">
           <label for="InputEmail" class="form-label">Email address</label>
@@ -110,23 +113,28 @@ if (isset($_GET['token'])) {
           <label for="InputPassword" class="form-label">Password</label>
           <input type="password" name="password" class="form-control" id="InputPassword" required>
         </div>
+
         <?php
         if (isset($_GET['token'])) {
           echo '<input type="hidden" name="verify_token" value="' . htmlspecialchars($_GET['token']) . '">';
         }
         ?>
-        <div class="mb-4">
-          <label for="signup" class="form-label">New User?</label>
-          <a href="Usersignuppage.php" id="signup" name="signup" class="alert-link" style="color: slateblue;">Signup</a>
-        </div>
+
         <div class="d-flex justify-content-center">
-          <button type="submit" name="login" style="background-color:slateblue" class="btn">Login</button>
+          <button type="submit" id="loginbtn" name="login" style="background-color:#987070" class="btn">Login</button>
+        </div>
+        <br>
+        <div class="mb-4">
+          <label for="signup" class="form-label">Don't have account?</label>
+          <a href="Usersignuppage.php" id="signup" name="signup" class="alert-link" style="color: #987070;">Sign up</a>
         </div>
       </form>
     </div>
 
   </div>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
